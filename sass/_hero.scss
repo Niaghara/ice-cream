@@ -1,0 +1,368 @@
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.hero_overlay {
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 767px) {
+    height: 502px;
+    padding-top: 50px;
+    padding-left: 20px;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 14px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 45px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.hero_overlay {
+  background-color: rgba(132, 161, 120, 1);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  @media screen and (max-width: 767px) {
+    background-image: url(../images/hero/dots-mobile.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero/dots-mobile2x.png);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/hero/dots-tablet.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero/dots-tablet2x.png);
+    }
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(../images/hero/dots_desktop.png),
+      url(../images/hero/ice-cream-desktop.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero/dots_desktop2x.png);
+
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: bottom center;
+    }
+  }
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero_container {
+  position: relative;
+  display: flex;
+}
+
+.container-left {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 65px;
+  // flex-grow: 1;
+}
+
+.about-ice-cream {
+  display: flex;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 42px;
+  }
+}
+
+.hero-title {
+  display: block;
+  box-sizing: content-box;
+  font-family: "Seymour One";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.27;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #fcfcfc;
+  @media screen and (max-width: 767px) {
+    max-width: 247px;
+    padding-top: 50px;
+
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 247px;
+    padding-top: 14px;
+
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 367px;
+    padding-top: 45px;
+
+    margin-bottom: 28px;
+
+    font-size: 38px;
+    line-height: 1.26;
+  }
+}
+
+.about-ice-cream__list {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.products-anchor .link-products {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+
+  width: 108px;
+  height: 38px;
+
+  background-color: transparent;
+  border: 2px solid #f8d24e;
+  border-radius: 8px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #000000;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition-property: border-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+
+  &:hover,
+  &:focus {
+    border: 2px solid #0a8817;
+    outline: transparent;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 134px;
+    height: 42px;
+    padding: 12px 34px;
+    border-radius: 10px;
+  }
+
+  &:hover {
+    border: 2px solid #0a8817;
+  }
+
+  &:focus {
+    border: 2px solid #0a8817;
+    color: #fff;
+  }
+  &:disabled {
+    border-color: rgba(171, 171, 171, 1);
+  }
+}
+
+.link-made {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+
+  color: #f8d24e;
+
+  transition-property: color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+
+  @media screen and (min-width: 1200px) {
+    width: 134px;
+    height: 42px;
+    padding: 12px 34px;
+    border-radius: 10px;
+    padding-left: 16px;
+
+    @media screen and (max-width: 767px) {
+      padding-left: 20px;
+    }
+
+    @media screen and (max-width: 1199px) {
+      padding-left: 32px;
+    }
+  }
+  &:hover {
+    color: #0a8817;
+  }
+
+  &:focus {
+    color: #fff;
+  }
+  &:disabled {
+    color: rgba(171, 171, 171, 1);
+  }
+}
+
+.info-with-arrow__list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.many-ice-cream__wrap .many-ice-cream__img {
+  display: block;
+  @media screen and (min-width: 768px) {
+    width: 152px;
+
+    @media screen and (min-width: 1200px) {
+      width: 225px;
+    }
+  }
+}
+
+.info-with-arrow__text {
+  display: block;
+  align-items: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42;
+  font-size: 12px;
+  width: 139px;
+
+  color: #fcfcfc;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    width: 200px;
+  }
+}
+.container-center {
+  display: block;
+  align-items: bottom;
+}
+
+.container-center .ice-creame-conus {
+  position: absolute;
+  width: 177px;
+  bottom: 0;
+  align-items: bottom;
+  right: 0;
+  margin-right: 60px;
+
+  @media screen and (min-width: 768px) {
+    width: 268px;
+    margin-right: 92px;
+
+    @media screen and (min-width: 1200px) {
+      width: 456px;
+    }
+  }
+}
+
+.container-right {
+  position: relative;
+  display: flex;
+}
+
+.ownership {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  padding-top: 28px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 53px;
+  }
+}
+.ownership__list {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  gap: 20px;
+  right: 0;
+
+  @media screen and (min-width: 1200px) {
+    gap: 16px;
+  }
+}
+
+.ownership__item {
+  display: block;
+  @media screen and (min-width: 1200px) {
+    width: 79px;
+  }
+}
+.ownership__amaunt {
+  display: block;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 1.21;
+  text-align: right;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #131313;
+  @media screen and (min-width: 1200px) {
+    width: 79px;
+    font-size: 46px;
+  }
+}
+
+.ownership__detail {
+  display: block;
+  width: 46px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: right;
+
+  color: #fcfcfc;
+
+  @media screen and (min-width: 1200px) {
+    width: 79px;
+    font-size: 14px;
+    line-height: 1.21;
+  }
+}
