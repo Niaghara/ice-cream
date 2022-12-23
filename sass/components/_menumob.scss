@@ -1,0 +1,152 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 40px 48px;
+  background-color: #ffffff;
+  z-index: 999;
+
+  display: flex;
+  flex-direction: column;
+
+  transform: translateX(100%);
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+  transition: transform 250 ms var(--timing-function);
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+  padding: 0;
+  background-color: transparent;
+  color: var(--title-text-color);
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  fill: var(--accent-color);
+}
+
+.container-nav .menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.mobile-menu__list {
+  padding: 0;
+  margin: 0;
+
+  margin-bottom: auto;
+}
+
+.mobile-menu__list .link {
+  display: block;
+  padding: 10px;
+  color: var(--title-text-color);
+}
+
+.mobile-menu__list .current {
+  color: var(--accent-color);
+}
+
+.mobile-menu__link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+
+  color: #212121;
+}
+
+.mobile-menu-phone {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #2196f3;
+}
+
+.mobile-phone {
+  margin-bottom: 32px;
+
+}
+.mobile-menu-contacts__list {
+  padding: 0;
+  margin-bottom: 64px;
+  text-decoration: none;
+}
+
+.mobile-menu-mailto {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  color: #757575;
+}
+.mobile-socials {
+
+  display: flex;
+  gap: 20px;
+}
+
+.mobile-social-link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+    
+}
+.mobile-socials-item {
+  position: relative;
+}
+
+.mobile-socials-item:not(:last-child)::after {
+  position: absolute;
+  top: 0%;
+  right:-12px;
+  transform: translate(-50%);
+  display: block;
+  content: "";
+  width:  1px;
+  height: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2); 
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+
+.mobile-socials:hover .mobile-socials-item::after,
+.mobile-socials:focus  .mobile-socials-item::after {
+  transform: rotate(90deg);
+}
+

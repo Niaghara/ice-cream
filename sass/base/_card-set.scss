@@ -1,0 +1,16 @@
+.card-set {
+  @media screen and (min-width: 768px){
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--indent);
+  }
+}
+
+.card-set__item,
+.card-set__icon {
+  @media screen and (min-width: 768px){
+  flex-basis: calc(
+    (100% - var(--indent) * (var(--items) - 1)) / (var(--items))
+  );
+}
+}
