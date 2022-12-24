@@ -24,7 +24,6 @@ p {
 @media screen and (max-width: 767px) {
   .hero_overlay {
     height: 502px;
-    padding-top: 50px;
     padding-left: 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -34,14 +33,12 @@ p {
 }
 @media screen and (min-width: 768px) {
   .hero_overlay {
-    padding-top: 14px;
     padding-left: 32px;
     padding-right: 32px;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero_overlay {
-    padding-top: 45px;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -80,7 +77,7 @@ p {
 }
 @media screen and (min-width: 1200px) {
   .hero_overlay {
-    background-image: url(../images/hero/dots_desktop.png), url(../images/hero/ice-cream-desktop.jpg);
+    background-image: url(../images/hero/dots_desktop.png);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
@@ -173,8 +170,8 @@ p {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  width: 108px;
-  height: 38px;
+  width: 104px;
+  height: 34px;
   background-color: transparent;
   border: 2px solid #f8d24e;
   border-radius: 8px;
@@ -199,9 +196,8 @@ p {
 }
 @media screen and (min-width: 1200px) {
   .products-anchor .link-products {
-    width: 134px;
-    height: 42px;
-    padding: 12px 34px;
+    width: 130px;
+    height: 38px;
     border-radius: 10px;
   }
 }
@@ -289,6 +285,7 @@ p {
 }
 
 .info-with-arrow__text {
+  position: relative;
   display: block;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -305,6 +302,22 @@ p {
   .info-with-arrow__text {
     font-size: 14px;
     width: 200px;
+  }
+}
+
+.info-with-arrow__text::after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 16px;
+  background-size: contain;
+  margin-top: 40px;
+  left: 0;
+  background-image: url(../images/hero/Arrow.png);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .info-with-arrow__text::after {
+    background-image: url(../images/hero/Arrow2x.png);
   }
 }
 

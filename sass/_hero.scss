@@ -18,19 +18,16 @@ p {
   justify-content: space-between;
   @media screen and (max-width: 767px) {
     height: 502px;
-    padding-top: 50px;
     padding-left: 20px;
     flex-direction: column;
   }
 
   @media screen and (min-width: 768px) {
-    padding-top: 14px;
     padding-left: 32px;
     padding-right: 32px;
   }
 
   @media screen and (min-width: 1200px) {
-    padding-top: 45px;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -65,8 +62,7 @@ p {
   }
 
   @media screen and (min-width: 1200px) {
-    background-image: url(../images/hero/dots_desktop.png),
-      url(../images/hero/ice-cream-desktop.jpg);
+    background-image: url(../images/hero/dots_desktop.png);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -151,8 +147,8 @@ p {
   vertical-align: middle;
   text-align: center;
 
-  width: 108px;
-  height: 38px;
+  width: 104px;
+  height: 34px;
 
   background-color: transparent;
   border: 2px solid #f8d24e;
@@ -179,9 +175,9 @@ p {
   }
 
   @media screen and (min-width: 1200px) {
-    width: 134px;
-    height: 42px;
-    padding: 12px 34px;
+    width: 130px;
+    height: 38px;
+
     border-radius: 10px;
   }
 
@@ -259,6 +255,7 @@ p {
 }
 
 .info-with-arrow__text {
+  position: relative;
   display: block;
   align-items: center;
   font-family: "Montserrat";
@@ -274,6 +271,23 @@ p {
     width: 200px;
   }
 }
+
+.info-with-arrow__text::after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 16px;
+  background-size: contain;
+  margin-top: 40px;
+  left: 0;
+  background-image: url(../images/hero/Arrow.png);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/hero/Arrow2x.png);
+  }
+}
+
 .container-center {
   display: block;
   align-items: bottom;
